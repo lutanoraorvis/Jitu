@@ -1,0 +1,286 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+/* Animated bg */
+
+.anim-gradient-bg {
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(243, 0, 0, 0.547) 3%, rgb(245, 53, 0) 15%,rgb(251, 0, 33)  38%, rgb(255, 82, 43) 58%, rgb(255, 43, 43) 63%,rgb(171, 27, 27) 86%);
+    animation: gradient 8s ease infinite;
+    background-size: 300% 300%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* =================================== */
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 15vh;
+    padding: 2rem 5rem;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+nav #nav-buttons{
+    align-items: center;
+    display: flex;
+    column-gap: 8px;
+    width: auto;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    border-radius: 8px;
+    border: 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: #D7083A;
+    color: #fbfbfb;
+}
+
+.btn-secondary{
+    outline: solid 0.7px #070707;
+    background: #fbfbfb;
+    color: #070707;
+    font-weight: 500;
+}
+
+.btn-primary{
+    outline: 0;
+    background: #070707;
+    color: #fbfbfb;
+    font-weight: 500;
+}
+
+.container .index-page-content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.container .index-page-content .history-section{
+    height: 85vh;
+    border-radius: 0 1rem 0 0;
+    background-color: #e0e0e9;
+    left: 0;
+    width: 25%;
+    padding: 2rem 2rem 2rem 5rem;
+    overflow: hidden;
+}
+
+.history-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.history-cards {
+    overflow-y: scroll;
+    max-height: 95%;
+    border-radius: 8px;
+}
+
+.history-card {
+    background: #ebebf0;
+    /* box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.08); */
+    border-radius: 8px;
+    border: 2px solid #070707;
+    padding: 8px 16px;
+    width: auto;
+    margin: 0.5rem 0;
+}
+
+.history-card-1 {
+    background: rgb(226, 250, 221);
+    background: linear-gradient(0deg, rgb(226, 250, 221) 0%, rgba(251,251,251,1) 2.2rem);
+}
+
+.history-card-2 {
+    background: rgb(248, 206, 206);
+    background: linear-gradient(0deg, rgb(248, 206, 206) 0%, rgba(251,251,251,1) 2.2rem);
+}
+
+.result-history {
+    font-weight: 800;
+}
+
+.result-history-1 {
+    color: rgb(17, 181, 17);
+}
+
+.result-history-2 {
+    color: #D7083A;
+}
+    
+.container .index-page-content .action-section{
+    background: #ebebf0;
+    right: 0;
+    width: 75%;
+    padding: 2rem 5rem 2rem 2rem;
+    border-radius: 1rem 0 0 0;
+}
+
+.output-area {
+    height: 90%;
+    max-height: 90%;
+    min-height: 50%;
+    position: relative;
+}
+
+.output-area p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    font-size: large;
+    text-align: center;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    width: 100%;
+    height: 10%;
+    max-height: 50%;
+    min-height: 10%;
+}
+
+.text-input {
+    width: 100%;
+    overflow-y: scroll;
+    min-height: 2rem;
+    max-height: 4rem;
+    border-radius: 8px;
+    border: solid 1px #070707;
+    padding: 8px 12px;
+}
+
+.text-input:empty:before {
+    content: attr(data-placeholder);
+    color: gray;
+}
+
+.submit-btn {
+    margin: 0 1rem;
+}
+
+/* ========== Index no account ========== */
+
+.locked-history-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    align-content: center;
+}
+
+.locked-history-cards p {
+    text-align: center;
+}
+
+.fi {
+    font-size: 64pt;
+}
+
+/* ========== Register Page ========== */
+
+.register-page-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 85vh;
+}
+
+.left-content {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 0 1rem 0 0;
+    padding: 5rem;
+    align-content: center;
+}
+
+.content-box h2 {
+    color: #fbfbfb;
+    font-weight: 500;
+    font-size: 36pt;
+}
+
+.right-content {
+    align-content: center;
+}
+
+.input-form {
+    max-width: 60%;
+    min-width: 40%;
+    margin: auto;
+}
+
+.input-section {
+    margin: 0.5rem 0;
+}
+
+.info-input {
+    width: 100%;
+    border-radius: 8px;
+    border: solid 1px #070707;
+    padding: 8px 12px;
+    margin-top: 4px;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    border: 0;
+    border-radius: 1rem;
+    background: #eeeef3;
+    box-shadow: 4px 12px 12px rgba(0, 0, 0, 0.15);
+}
+
+.submit-btn {
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin: 1.2rem 0 0 0;
+}
+
+.already-nav {
+    text-align: center;
+    margin-top: 1rem;
+}
