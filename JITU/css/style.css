@@ -1,4 +1,4 @@
-
+/* CSS */
 *{
     margin: 0;
     padding: 0;
@@ -8,7 +8,6 @@
 }
 
 /* Animated bg */
-
 .anim-gradient-bg {
     overflow: auto;
     background: linear-gradient(315deg, rgba(243, 0, 0, 0.547) 3%, rgb(245, 53, 0) 15%,rgb(251, 0, 33)  38%, rgb(255, 82, 43) 58%, rgb(255, 43, 43) 63%,rgb(171, 27, 27) 86%);
@@ -29,14 +28,32 @@
     }
 }
 
-/* =================================== */
-
 .container{
     width: 100%;
     min-height: 100vh;
     background-color: transparent;
     background-size: cover;
     background-position: center;
+}
+
+a:not(.btn) {
+    text-decoration: none;
+}
+
+a:link:not(.btn) {
+    color: blue;
+}
+
+a:visited:not(.btn) {
+    color: blue;
+}
+
+a:hover:not(.btn) {
+    color: #D7083A;
+}
+
+a:active:not(.btn) {
+    color: #58039c;
 }
 
 nav{
@@ -48,10 +65,45 @@ nav{
     padding: 2rem 5rem;
 }
 
+#right-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .logo{
     width: 120px;
     cursor: pointer;
 }
+
+/* Profile section */
+.profile {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    padding: 0.35rem 0.7rem;
+    height: fit-content;
+    outline: 1px solid #070707;
+    cursor: pointer;
+}
+
+.photo-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 0 hsl(0, 0%, 0%, 0.08);
+    border-radius: 50%;
+}
+
+.photo-profile img {
+    display: flex;
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 
 nav #nav-buttons{
     align-items: center;
@@ -61,18 +113,21 @@ nav #nav-buttons{
 }
 
 .btn{
-    display: flex;
+    display: grid;
     align-items: center;
+    min-width: 6rem;
     padding: 16px 24px;
     border-radius: 8px;
     border: 0;
     text-decoration: none;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .btn:hover{
     background: #D7083A;
     color: #fbfbfb;
+    outline: 0;
 }
 
 .btn-secondary{
@@ -89,6 +144,25 @@ nav #nav-buttons{
     font-weight: 500;
 }
 
+.logout-btn {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin: 1rem;
+    padding: 12px 20px;
+    color: #D7083A;
+    outline-color: #D7083A;
+}
+
+.logout-btn:hover {
+    outline: 1px solid #D7083A;
+}
+
+.fi-rr-leave {
+    font-size: 20px;
+    margin: 4px 0 0 0;
+}
+
 .container .index-page-content{
     display: flex;
     width: 100%;
@@ -98,58 +172,109 @@ nav #nav-buttons{
 .container .index-page-content .history-section{
     height: 85vh;
     border-radius: 0 1rem 0 0;
-    background-color: #e0e0e9;
+    background-color: #EEEEEE;
     left: 0;
     width: 25%;
     padding: 2rem 2rem 2rem 5rem;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .history-section h2 {
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 .history-cards {
-    overflow-y: scroll;
+    flex-grow: 1;
+    gap: 1rem;
+    overflow-y: auto;
+    overflow: auto;
     max-height: 95%;
     border-radius: 8px;
+    padding: 1rem;
 }
 
+.history-card.show {
+    display: flex; /* Tampilkan saat diperlukan */
+}
+
+.history-card .news-title {
+    font-weight: 200;
+}
+
+.history-card .status {
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 4px;
+    width: 20%;
+    color: white;
+}
+
+/* Tambahkan efek hover pada kotak berita */
+.history-card:hover {
+    transform: translateY(-5px); /* Angkat kotak saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan */
+    color: #fbfbfb;
+}
+
+/* Tambahkan jarak antara kotak-kotak berita */
 .history-card {
+    margin-bottom: 20px; /* Jarak antara setiap kotak */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animasi untuk hover */
+    display: none; /* Sembunyikan secara default */
+    justify-content: space-between;
     background: #ebebf0;
-    /* box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.08); */
+    box-shadow: 0.2rem 0.4rem 0.4rem hsla(0, 0%, 0%, 0.08);
     border-radius: 8px;
-    border: 2px solid #070707;
+    border: transparent;
     padding: 8px 16px;
     width: auto;
-    margin: 0.5rem 0;
 }
 
-.history-card-1 {
-    background: rgb(226, 250, 221);
-    background: linear-gradient(0deg, rgb(226, 250, 221) 0%, rgba(251,251,251,1) 2.2rem);
+/* Gaya untuk status HOAX */
+.history-card-hoax {
+    background: linear-gradient(90deg, #ebebf0 60%, rgba(183, 5, 47, 1) 85%)
 }
 
-.history-card-2 {
-    background: rgb(248, 206, 206);
-    background: linear-gradient(0deg, rgb(248, 206, 206) 0%, rgba(251,251,251,1) 2.2rem);
+.history-card-hoax:hover {
+    background: linear-gradient(90deg, #070707 30%, rgba(183, 5, 47, 1) 65%)
+}
+
+/* Gaya untuk status TIDAK HOAX */
+.history-card-not-hoax {
+    background: linear-gradient(90deg, #ebebf0 60%, rgba(32, 124, 42, 1) 85%)
+}
+
+.history-card-not-hoax:hover {
+    background: linear-gradient(90deg, #070707 30%, rgba(32, 124, 42, 1) 65%)
+}
+
+.status.hoax {
+    color: #ffecf1;
+}
+
+.status.not-hoax {
+    color: #eeffee;
 }
 
 .result-history {
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .result-history-1 {
-    color: rgb(17, 181, 17);
+    color: #11b511;
+    font-size: 48px;
 }
 
 .result-history-2 {
     color: #D7083A;
+    font-size: 48px;
 }
     
 .container .index-page-content .action-section{
-    background: #ebebf0;
+    background: #ffffff;
     right: 0;
     width: 75%;
     padding: 2rem 5rem 2rem 2rem;
@@ -161,45 +286,76 @@ nav #nav-buttons{
     max-height: 90%;
     min-height: 50%;
     position: relative;
+    text-align: center; /* Align messages to the center */
 }
 
 .output-area p {
+    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%);
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     font-size: large;
     text-align: center;
 }
 
 .input-box {
+    position: fixed;
+    bottom: 40px;
+    left: 60%;
+    transform: translateX(-50%);
     display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    width: 100%;
-    height: 10%;
-    max-height: 50%;
-    min-height: 10%;
+    align-items: flex-end;
+    gap: 1rem; 
+    justify-content: center;
+    width: 801px; /* Atur lebar sesuai dengan kebutuhan */
 }
 
 .text-input {
     width: 100%;
-    overflow-y: scroll;
-    min-height: 2rem;
-    max-height: 4rem;
+    background-color: #eeeeee;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #E0E0E0;
     border-radius: 8px;
-    border: solid 1px #070707;
-    padding: 8px 12px;
+    resize: none;
+    height: auto;
+    line-height: 1.5em;
+    max-height: 6em;
+    overflow: hidden;
+    box-sizing: border-box;
+    word-wrap: break-word;
 }
 
 .text-input:empty:before {
     content: attr(data-placeholder);
-    color: gray;
+    color: #999;
 }
 
-.submit-btn {
-    margin: 0 1rem;
+.text-input:focus:before {
+    content: none;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #000000;
+    overflow-wrap: break-word; /* Ensures long words break and fit within the message box */
+}
+  
+.message-personal {
+    position: relative; /* Menjadikan posisi relatif */
+    margin: auto; /* Menyelaraskan ke tengah secara horizontal */
+    max-width: 60%; /* Membatasi lebar maksimum pesan */
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+    background-color: transparent; /* Menghilangkan latar belakang biru */
+    text-align: center; /* Menyelaraskan teks ke tengah */
+    font-size: 20px;
 }
 
 /* ========== Index no account ========== */
@@ -207,15 +363,16 @@ nav #nav-buttons{
 .locked-history-cards {
     display: flex;
     flex-direction: column;
-    gap: 0rem;
-    align-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 10rem;
 }
 
 .locked-history-cards p {
     text-align: center;
 }
 
-.fi {
+.fi-rr-lock::before{
     font-size: 64pt;
 }
 
@@ -252,6 +409,13 @@ nav #nav-buttons{
     margin: auto;
 }
 
+.input-form h2 {
+    text-align: center;
+    font-size: x-large;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
 .input-section {
     margin: 0.5rem 0;
 }
@@ -259,7 +423,7 @@ nav #nav-buttons{
 .info-input {
     width: 100%;
     border-radius: 8px;
-    border: solid 1px #070707;
+    border:     solid 1px #070707;
     padding: 8px 12px;
     margin-top: 4px;
 }
@@ -270,7 +434,7 @@ nav #nav-buttons{
     padding: 4rem;
     border: 0;
     border-radius: 1rem;
-    background: #eeeef3;
+    background: #F5F5F5;
     box-shadow: 4px 12px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -283,4 +447,57 @@ nav #nav-buttons{
 .already-nav {
     text-align: center;
     margin-top: 1rem;
+}
+
+.verif-result {
+    font-size: 20px;
+}
+
+/* Tambahkan gaya untuk link sumber */
+.source-links {
+    margin-top: 10px;
+}
+
+.source-links a {
+    font-size: 16px;
+    color: blue;
+    display: block;
+    margin-top: 5px;
+}
+
+.text-input-container {
+    display: flex;
+    align-items: center;
+    border-top: 2px solid #E0E0E0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.text-input {
+    flex-grow: 1;
+    resize: none;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: 8px;
+    box-sizing: border-box;
+    border-color: #828282;
+    outline: none;
+    overflow: hidden; /* Hide scrollbar for the textarea */
+    max-height: 200px; /* Maximum height to prevent growing too large */
+}
+
+.send-btn {
+    background-color: #D7083A;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    align-items: center;
+}
+
+.send-btn:hover {
+    background-color: #000000;
 }

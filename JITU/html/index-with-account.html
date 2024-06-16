@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JITU</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+    <script src="html/script-index-with-account"></script>
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 </head>
 <body>
     <div class="container">
@@ -12,62 +16,45 @@
             <a href="index-with-account.html">
                 <img src="../img/logo-icon.png" class="logo">
             </a>
-            <div id="nav-buttons">
-                <a href="login-page.html" class="btn btn-secondary">Masuk</a>
-                <a href="register-page.html" class="btn btn-primary">Daftar</a>
+            <div id="right-nav">
+                <div class="profile">
+                    <div class="username-profile">
+                        <p>Sari Nur Wijayanto</p>
+                    </div>
+                    <div class="photo-profile">
+                        <a>
+                            <img src="../img/profile.jpeg" alt="Profile Picture">
+                        </a>
+                    </div>
+                </div>
+                <div class="btn btn-secondary logout-btn" onclick="location.href='/html/login-page.html';">
+                    <i class="fi fi-rr-leave"></i>
+                    <p>Keluar</p>
+                </div>
             </div>
         </nav>
 
         <div class="index-page-content">
-            <section class="history-section">
+            <div class="history-section">
                 <h2>Riwayat</h2>
-                <div class="history-cards">
-                    <div class="history-card history-card-1">
-                        <p>Apakah Hitler meninggal di Garut?</p>
-                        <p class="result-history result-history-1">FAKTA</p>
-                    </div>
-    
-                    <div class="history-card history-card-2">
-                        <p>Negara Kesatuan Republik Indonesia berdiri sejak tahun 1876</p>
-                        <p class="result-history result-history-2">HOAKS</p>
-                    </div>
-    
-                    <div class="history-card history-card-2">
-                        <p>PBB merupakan organisasi yang asal pembentukannya dari sebuah kerajaan kuno Nusantara. Kerajaan tersebut adalah Kerajaan Su....</p>
-                        <p class="result-history result-history-2">HOAKS</p>
-                    </div>
-                    <div class="history-card history-card-2">
-                        <p>PBB merupakan organisasi yang asal pembentukannya dari sebuah kerajaan kuno Nusantara. Kerajaan tersebut adalah Kerajaan Su....</p>
-                        <p class="result-history result-history-2">HOAKS</p>
-                    </div>
-                    <div class="history-card history-card-2">
-                        <p>PBB merupakan organisasi yang asal pembentukannya dari sebuah kerajaan kuno Nusantara. Kerajaan tersebut adalah Kerajaan Su....</p>
-                        <p class="result-history result-history-2">HOAKS</p>
-                    </div>
-                    <div class="history-card history-card-2">
-                        <p>PBB merupakan organisasi yang asal pembentukannya dari sebuah kerajaan kuno Nusantara. Kerajaan tersebut adalah Kerajaan Su....</p>
-                        <p class="result-history result-history-2">HOAKS</p>
-                    </div>
-                    <div class="history-card history-card-2">
-                        <p>PBB merupakan organisasi yang asal pembentukannya dari sebuah kerajaan kuno Nusantara. Kerajaan tersebut adalah Kerajaan Su....</p>
-                        <p class="result-history result-history-2">HOAKS</p>
-                    </div>
+                <div id="history" class="history-cards">
+                    <!-- Items will be inserted dynamically -->
                 </div>
-            </section>
+            </div>
 
-            <section class="action-section">
-                <div class="output-area">
+            <div class="action-section">
+                <div class="chat-messages output-area">
                     <p>Tulis berita yang ingin anda verifikasi kebenarannya ke dalam kotak tulis di bawah</p>
                 </div>
 
-                <div class="input-box">
-                    <div class="text-input" contenteditable="true" data-placeholder="Masukkan teks.."></div>
-                    <button type="submit" class="btn btn-primary submit-btn">
-                        Verifikasi
-                    </button>
+                <div class="input-box"> 
+                    <div class="text-input" id="text-input" contenteditable="true" data-placeholder="Masukkan teks disini"></div>
+                    <button type="submit" class="btn btn-primary send-btn" id="send-button">Kirim</button>
                 </div>
-            </section>
+            </div>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script-index-with-account.js"></script>
 </body>
 </html>

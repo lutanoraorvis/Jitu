@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masuk</title>
     <link rel="stylesheet" href="../css/style.css">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 </head>
 <body>
     <div class="container">
@@ -23,6 +25,8 @@
 
             <div class="right-content">
                 <form class="input-form">
+                    <h2>Masuk</h2>
+                    
                     <section class="input-section email-input">
                         <label for="email">Alamat Surel</label>
                         <input type="email" id="email" class="info-input" required>
@@ -33,13 +37,13 @@
                         <input type="password" id="password" class="info-input" required>
                     </section>
                     
-                    <button type="submit" form="input-form" value="Submit" class="btn-primary submit-btn">Masuk</button>
+                    <button type="submit" form="input-form" onclick="Login()" value="Submit" class="btn-primary submit-btn">Masuk</button>
 
                     <p class="already-nav">Sudah memiliki akun? <a href="/html/register-page.html">Daftar</a> </p>
                 </form>
             </div>
         </div>
-
+        <script src="../js/script.js"></script>    
     </div>
 </body>
 </html>

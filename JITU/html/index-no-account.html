@@ -6,6 +6,9 @@
     <title>JITU</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <script src="html/script.js"></script>
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 </head>
 <body>
     <div class="container">
@@ -24,7 +27,6 @@
                 <h2>Riwayat</h2>
                 <div class="locked-history-cards">
                     <i class="fi fi-rr-lock"></i>
-                    <!-- UIcons by <a href="https://www.flaticon.com/uicons">Flaticon</a> -->
                     <h2>Riwayat Terkunci</h2>
                     <p><a href="login-page.html">Masuk</a> atau <a href="register-page.html">daftar</a> akun untuk menggunakan fitur riwayat</p>
                 </div>
@@ -35,14 +37,17 @@
                     <p>Tulis berita yang ingin anda verifikasi kebenarannya ke dalam kotak tulis di bawah</p>
                 </div>
 
-                <div class="input-box">
-                    <div class="text-input" contenteditable="true" data-placeholder="Masukkan teks.."></div>
-                    <button type="submit" class="btn btn-primary submit-btn">
-                        Verifikasi
-                    </button>
+                <div class="input-box"> 
+                    <div class="text-input" id="text-input" contenteditable="true" data-placeholder="Masukkan teks disini"></div>
+                    <button type="submit" class="btn btn-primary send-btn" id="send-button">Kirim</button>
                 </div>
+
+                <!-- Menambahkan area untuk sumber -->
+                <div class="source-links" id="source-links"></div>
             </section>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>
