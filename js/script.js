@@ -125,7 +125,6 @@ function Login(){
     } else if (!checkAlphaNum(password.value)){ 
         alert("Kata sandi harus alfanumerik!");
     } else {
-        alert("Sukses!");
         window.location.href = "index-with-account.html";
     }
 }
@@ -146,6 +145,7 @@ function Register(){
     } else if (confpassword.value != password.value){
         alert("Konfirmasi Kata Sandi harus sama dengan Kata Sandi!");
     } else {
+        alert("Moving to login page; Dev notes: redirecting is still bugging");
         window.location.href = "login-page.html";
     } 
 }
