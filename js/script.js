@@ -129,7 +129,6 @@ function Login(){
     }
 }
 
-// Additional functions (Register and Login) remain unchanged
 function Register(){
     let name = document.getElementById('name');
     let email = document.getElementById('email');
@@ -145,7 +144,6 @@ function Register(){
     } else if (confpassword.value != password.value){
         alert("Konfirmasi Kata Sandi harus sama dengan Kata Sandi!");
     } else {
-        alert("Moving to login page; Dev notes: redirecting is still bugging");
         window.location.href = "login-page.html";
     } 
 }
