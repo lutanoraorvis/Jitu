@@ -14,21 +14,6 @@ $(document).ready(function() {
 
     // Function to insert and process message
     function insertMessage() {
-
-        // Spinner
-        var userInput = document.getElementById('text-input').value;
-        var outputArea = document.querySelector('.output-area');
-        var spinner = document.getElementsByClassName('loader');
-        var container = document.querySelector('.action-section');
-        
-        // Tampilkan spinner dan blur latar belakang
-        spinner.style.display = 'block';
-
-        // Simulasikan proses verifikasi
-        setTimeout(function() {
-            // Hilangkan spinner dan blur
-            spinner.style.display = 'none';
-        }, 3000);
         const msg = $('#text-input').text().trim().toLowerCase(); // Convert to lowercase for easier checking
         
         if (msg === '') {
@@ -151,28 +136,3 @@ $(document).ready(function() {
         textInput.css('height', scrollHeight + 'px');
     }
 });
-
-// =============== Spinner =================
-
-function ShowSpin(){
-    $("#output-section").hide();
-    $(".loader").css("display","inline-block").show();
-}
-
-function Send(elem){  
-  var txt = $("#send-button").val();
-  if(txt){
-    ShowSpin();
-    $(".loader").hide();    
-    $("#text-input").text(txt);
-    $("#text-input").fadeIn(1500).css("display","inline-block");
-    //$(elem).text("Resend");
-  }else{
-    $(".loader").show();
-    $("#text-input").hide();
-  }
-}
-
-function StopAnimation(){
-  $(".spinme-left").fadeOut();
-}
