@@ -404,7 +404,7 @@ nav #nav-buttons{
 }
 
 .input-form {
-    max-width: 58%;
+    max-width: 60%;
     min-width: 50%;
     margin: auto;
 }
@@ -418,7 +418,7 @@ nav #nav-buttons{
 }
 
 .input-section {
-    margin: 0.625rem 1rem;
+    margin: 0.625rem 2rem;
 }
 
 .info-input {
@@ -442,7 +442,7 @@ nav #nav-buttons{
 .submit-btn {
     border-radius: 0.5rem;
     padding: 0.5rem 1.25rem;
-    margin: 1.25rem 1rem 0 1rem;
+    margin: 1.25rem 2rem 0 2rem;
 }
 
 .already-nav {
@@ -451,7 +451,7 @@ nav #nav-buttons{
 }
 
 .verif-result {
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 /* Tambahkan gaya untuk link sumber */
