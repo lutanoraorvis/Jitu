@@ -99,6 +99,8 @@ $(document).ready(function() {
     }
 });
 
+// Form Validation
+
 function checkAlphaNum(password){
     var isAlpha = false;
     var isNum = false;
@@ -121,9 +123,13 @@ function Login(){
     let password = document.getElementById('password');
 
     if (!email.value.endsWith("@gmail.com")){
-        alert("Email harus diakhiri dengan @gmail.com!");   
+        alert("Email harus diakhiri dengan @gmail.com!");
+    } else if (password.length == 0){
+        alert("Kata sandi tidak boleh kosong!");
+    } else if (password.length < 8){
+        alert("Masukkan kata sandi minimal 8 karakter"); 
     } else if (!checkAlphaNum(password.value)){ 
-        alert("Kata sandi harus alfanumerik!");
+        alert("Kata sandi harus berisi huruf kecil, huruf Kapital, angka, dan simbol!");
     } else {
         window.location.href = "index-with-account.html";
     }
@@ -139,8 +145,12 @@ function Register(){
         alert("Nama harus terdiri dari minimal 4 karakter!");
     } else if (!email.value.endsWith("@gmail.com")){
         alert("Email harus diakhiri dengan @gmail.com!");
+    } else if (password.length == 0){
+        alert("Kata sandi tidak boleh kosong!");
+    } else if (password.length < 8){
+        alert("Masukkan kata sandi minimal 8 karakter");
     } else if (!checkAlphaNum(password.value)){
-        alert("Kata sandi harus alfanumerik!");
+        alert("Kata sandi harus berisi huruf kecil, huruf Kapital, angka, dan simbol!");
     } else if (confpassword.value != password.value){
         alert("Konfirmasi Kata Sandi harus sama dengan Kata Sandi!");
     } else {

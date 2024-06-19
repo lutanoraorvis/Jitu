@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     // Function to handle sending message on button click
     $('#send-button').click(function() {
+        
         insertMessage();
     });
 
@@ -108,6 +109,15 @@ $(document).ready(function() {
         // Create message indicating the title and status
         const resultMessage = $('<span class="result-history">' + title + ' ' + status + '</span>').css('color', status === 'HOAX' ? '#D7083A' : '#00B512');
         verificationMessage.append(resultMessage);
+
+        // Add source links based on status
+        if (status === 'HOAX') {
+            const hoaxSources = $('<div class="hoax-sources">Sumber: <br><a href="https://www.google.com/" style="font-size: 16px; color: blue;">https://www.cnn.com/</a><br><a href="https://www.kompas.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/</a><br><a href="https://www.cnbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com</a></div>');
+            verificationMessage.append(hoaxSources);
+        } else {
+            const notHoaxSources = $('<div class="not-hoax-sources">Sumber: <br><a href="https://www.google.com/" style="font-size: 16px; color: blue;">https://www.cnn.com/</a><br><a href="https://www.kompas.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/</a><br><a href="https://www.cnbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com</a></div>');
+            verificationMessage.append(notHoaxSources);
+        }
 
         // Optionally, scroll to the bottom of the chat container
         $('.output-area').scrollTop($('.output-area')[0].scrollHeight);
