@@ -44,7 +44,7 @@ $(document).ready(function() {
             verificationMessage.append(resultMessage);
 
             // Add source links for hoax
-            const hoaxSources = $('<div class="hoax-sources">Sumber: <br><a href="https://www.google.com/" style="font-size: 16px; color: blue;">https://www.bbc.com/</a><br><a href="https://www.beritasatu.com/" style="font-size: 16px; color: blue;">https://www.kompas.com/</a><br><a href="https://www.mediaindonesia.com/" style="font-size: 16px; color: blue;">https://www.cnbc.com/</a></div>');
+            const hoaxSources = $('<div class="hoax-sources">Sumber: <br><a href="https://www.bbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com/</a><br><a href="https://www.beritasatu.com/" style="font-size: 16px; color: blue;">https://www.beritasatu.com/</a><br><a href="https://www.mediaindonesia.com/" style="font-size: 16px; color: blue;">https://www.mediaindonesia.com/</a></div>');
             $('.output-area').append(hoaxSources);
         } else {
             // Create message indicating it's not a hoax
@@ -52,7 +52,7 @@ $(document).ready(function() {
             verificationMessage.append(resultMessage);
 
             // Add source links for not a hoax
-            const notHoaxSources = $('<div class="not-hoax-sources">Sumber: <br><a href="https://www.google.com/" style="font-size: 16px; color: blue;">https://www.bbc.com/</a><br><a href="https://www.beritasatu.com/" style="font-size: 16px; color: blue;">https://www.kompas.com/</a><br><a href="https://www.mediaindonesia.com/" style="font-size: 16px; color: blue;">https://www.cnbc.com/</a></div>');
+            const notHoaxSources = $('<div class="not-hoax-sources">Sumber: <br><a href="https://www.bbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com/</a><br><a href="https://www.beritasatu.com/" style="font-size: 16px; color: blue;">https://www.beritasatu.com/</a><br><a href="https://www.cnbc.com/" style="font-size: 16px; color: blue;">https://www.cnbc.com/</a></div>');
             $('.output-area').append(notHoaxSources);
         }
 

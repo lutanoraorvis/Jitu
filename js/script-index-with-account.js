@@ -112,10 +112,10 @@ $(document).ready(function() {
 
         // Add source links based on status
         if (status === 'HOAX') {
-            const hoaxSources = $('<div class="hoax-sources">Sumber: <br><a href="https://www.google.com/" style="font-size: 16px; color: blue;">https://www.cnn.com/</a><br><a href="https://www.kompas.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/</a><br><a href="https://www.cnbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com</a></div>');
+            const hoaxSources = $('<div class="hoax-sources">Sumber: <br><a href="https://www.cnn.com/" style="font-size: 16px; color: blue;">https://www.cnn.com/</a><br><a href="https://www.youtube.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/</a><br><a href="https://www.bbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com</a></div>');
             verificationMessage.append(hoaxSources);
         } else {
-            const notHoaxSources = $('<div class="not-hoax-sources">Sumber: <br><a href="https://www.google.com/" style="font-size: 16px; color: blue;">https://www.cnn.com/</a><br><a href="https://www.kompas.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/</a><br><a href="https://www.cnbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com</a></div>');
+            const notHoaxSources = $('<div class="not-hoax-sources">Sumber: <br><a href="https://www.google.com/" style="font-size: 16px; color: blue;">https://www.google.com/</a><br><a href="https://www.kompas.com/" style="font-size: 16px; color: blue;">https://www.kompas.com/</a><br><a href="https://www.cnbc.com/" style="font-size: 16px; color: blue;">https://www.cnbc.com</a></div>');
             verificationMessage.append(notHoaxSources);
         }
 
