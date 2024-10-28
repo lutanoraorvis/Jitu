@@ -45,7 +45,7 @@ $(document).ready(function() {
             verificationMessage.append(resultMessage);
 
             // Add source links for hoax
-            const hoaxSources = $('<div class="hoax-sources">Sumber: <br><a href="https://www.google.com/" style="font-size: 16px; color: blue;">https://www.cnn.com</a><br><a href="https://www.kompas.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/</a><br><a href="https://www.cnbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com/</a></div>');
+            const hoaxSources = $('<div class="hoax-sources">Sumber: <br><a href="https://www.cnn.com/" style="font-size: 16px; color: blue;">https://www.cnn.com</a><br><a href="https://www.youtube.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/</a><br><a href="https://www.bbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com/</a></div>');
             $('.output-area').append(hoaxSources);
 
             // Add class to history card
@@ -60,7 +60,7 @@ $(document).ready(function() {
             verificationMessage.append(resultMessage);
 
             // Add source links for not a hoax
-            const notHoaxSources = $('<div class="not-hoax-sources">Sumber: <br><a href="https://www.google.com/" style="font-size: 16px; color: blue;">https://www.cnn.com/</a><br><a href="https://www.kompas.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/</a><br><a href="https://www.cnbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com</a></div>');
+            const notHoaxSources = $('<div class="not-hoax-sources">Sumber: <br><a href="https://www.cnn.com/" style="font-size: 16px; color: blue;">https://www.cnn.com/</a><br><a href="https://www.youtube.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/</a><br><a href="https://www.bbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com</a></div>');
             $('.output-area').append(notHoaxSources);
 
             // Add class to history card
