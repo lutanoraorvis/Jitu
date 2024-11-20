@@ -15,7 +15,8 @@ $(document).ready(function() {
 
     // Function to insert and process message
     function insertMessage() {
-        const msg = $('#text-input').text().trim().toLowerCase(); // Convert to lowercase for easier checking
+        // const msg = $('#text-input').text().trim().toLowerCase(); // Convert to lowercase for easier checking
+        const msg = $('#text-input').text().trim(); // Not converted to lowercase
         
         if (msg === '') {
             return; // If message is empty, do not proceed
@@ -45,12 +46,13 @@ $(document).ready(function() {
             verificationMessage.append(resultMessage);
 
             // Add source links for hoax
-            const hoaxSources = $('<div class="hoax-sources">Sumber: <br><a href="https://www.cnn.com/" style="font-size: 16px; color: blue;">https://www.cnn.com</a><br><a href="https://www.youtube.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/</a><br><a href="https://www.bbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com/</a></div>');
+            const hoaxSources = $('<div class="hoax-sources">Sumber: <br><a href="https://www.cnn.com/" style="font-size: 16px; color: blue;">https://www.cnn.com/source1</a><br><a href="https://www.youtube.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/source2</a><br><a href="https://www.bbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com/source3</a></div>');
             $('.output-area').append(hoaxSources);
 
             // Add class to history card
             const historyCard = $('<div class="history-card history-card-hoax">' +
-                '<span class="news-title">Berita ' + ($('.history-card').length + 1) + '</span>' +
+                // '<span class="news-title">Berita ' + ($('.history-card').length + 1) + 
+                '<span class="news-title">' + msg.substr(0, 7) + '..' + '</span>' +
                 '<span class="status hoax">HOAX</span>' +
                 '</div>').addClass('show');
             $('#history').append(historyCard);
@@ -60,18 +62,19 @@ $(document).ready(function() {
             verificationMessage.append(resultMessage);
 
             // Add source links for not a hoax
-            const notHoaxSources = $('<div class="not-hoax-sources">Sumber: <br><a href="https://www.cnn.com/" style="font-size: 16px; color: blue;">https://www.cnn.com/</a><br><a href="https://www.youtube.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/</a><br><a href="https://www.bbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com</a></div>');
+            const notHoaxSources = $('<div class="not-hoax-sources">Sumber: <br><a href="https://www.cnn.com/" style="font-size: 16px; color: blue;">https://www.cnn.com/source1</a><br><a href="https://www.youtube.com/" style="font-size: 16px; color: blue;">https://www.youtube.com/source2</a><br><a href="https://www.bbc.com/" style="font-size: 16px; color: blue;">https://www.bbc.com/source3</a></div>');
             $('.output-area').append(notHoaxSources);
 
             // Add class to history card
             const historyCard = $('<div class="history-card history-card-not-hoax">' +
-                '<span class="news-title">Berita ' + ($('.history-card').length + 1) + '</span>' +
+                // '<span class="news-title">Berita ' + ($('.history-card').length + 1) + 
+                '<span class="news-title">' + msg.substr(0, 7) + '..' + '</span>' +
                 '<span class="status not-hoax">TIDAK HOAX</span>' +
                 '</div>').addClass('show');
             $('#history').append(historyCard);
         }
 
-        // Clear input field after sending message
+        // Clear input field after sending messageak
         $('#text-input').empty(); // Empty the input field
 
         // Optionally, scroll to the bottom of the chat container

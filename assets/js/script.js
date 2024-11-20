@@ -14,7 +14,8 @@ $(document).ready(function() {
 
     // Function to insert and process message
     function insertMessage() {
-        const msg = $('#text-input').text().trim().toLowerCase(); // Convert to lowercase for easier checking
+        // const msg = $('#text-input').text().trim().toLowerCase(); // Convert to lowercase for easier checking
+        const msg = $('#text-input').text().trim(); // Not converted to lowercase
 
         if (msg === '') {
             return; // If message is empty, do not proceed
