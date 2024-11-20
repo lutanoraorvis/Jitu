@@ -310,7 +310,8 @@ nav #nav-buttons{
     align-items: flex-end;
     gap: 1rem; 
     justify-content: center;
-    width: 50rem; /* Atur lebar sesuai dengan kebutuhan */
+    min-width: 35rem;
+    max-width: 70rem;
 }
 
 .text-input {
@@ -358,6 +359,7 @@ nav #nav-buttons{
     background-color: transparent; /* Menghilangkan latar belakang biru */
     text-align: center; /* Menyelaraskan teks ke tengah */
     font-size: 1.25rem;
+    font-style: italic;
 }
 
 /* ========== Index no account ========== */
@@ -552,5 +554,7 @@ nav #nav-buttons{
 }
 
 @media screen and (max-width: 1040px) {
-    
+    .container .index-page-content .history-section {
+        padding: 2rem 0.5rem 2rem 0rem;
+    }
 }
